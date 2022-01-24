@@ -5,46 +5,21 @@ python: "3.6"
 
 matrix:
   include:
-    - python: "2.7"
-      env:
-        - TOXENV=py27-without_coverage
-    - python: "2.7"
-      env:
-        - TOXENV=py27-with_coverage
-    - python: "3.5"
-      env:
-        - TOXENV=py35-without_coverage
-    - python: "3.5"
-      env:
-        - TOXENV=py35-with_coverage
-    - python: "3.6"
-      env:
-        - TOXENV=py36-without_coverage
-    - python: "3.6"
-      env:
-        - TOXENV=py36-with_coverage
-    - python: "3.7"
-      env:
-        - TOXENV=py37-without_coverage
-    - python: "3.7"
-      env:
-        - TOXENV=py37-with_coverage
     - python: "3.8"
       env:
         - TOXENV=py38-without_coverage
     - python: "3.8"
       env:
         - TOXENV=py38-with_coverage
-    - python: "pypy"
+    - python: "3.8"
+      arch: arm64
       env:
-        - TOXENV=pypy-without_coverage
-    - python: "pypy"
+        - TOXENV=py38-without_coverage
+    - python: "3.8"
+      arch: arm64
       env:
-        - TOXENV=pypy-with_coverage
-    - env:
-        - TOXENV=pypy3-without_coverage
-    - env:
-        - TOXENV=pypy3-with_coverage
+        - TOXENV=py38-with_coverage
+
 
 install:
   - case "$TOXENV" in
